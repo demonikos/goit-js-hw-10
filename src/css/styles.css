@@ -18,3 +18,29 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 }
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.country-wrap {
+  display: flex;
+  column-gap: 10px;
+  align-content: center;
+  justify-content: start;
+}
+
+span {
+  font-weight: bold;
+}
+
+.country-data{
+padding-bottom: 15px;
+}
+
+.solo-img{
+  align-self: center;
+  width: 70px;
+  height: auto;
+}
