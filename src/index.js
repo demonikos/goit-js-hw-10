@@ -51,7 +51,7 @@ function inputHandler(inputValue) {
         Notify.failure('Oops, there is no country with that name');
         // console.dir(error);
     } else {
-        Notify.failure('Oops, something going wrong!');
+        Notify.failure(error.message);
         console.dir(error);
     }
         });
