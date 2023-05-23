@@ -6,7 +6,6 @@ export function fetchCountries(name) {
         fields: 'name,capital,population,flags,languages',
     })
     return fetch(`${BASE_URL}/${name}?${params}`)
-    // return fetch(`https://istio.com/`)
 
       .then(response => {
         //   console.log(response);

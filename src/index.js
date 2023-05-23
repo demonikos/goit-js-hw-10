@@ -9,8 +9,6 @@ const countryList = document.querySelector('.country-list');
 const countryInfo = document.querySelector('.country-info');
 const countryInput = document.querySelector('#search-box');
 
-// let string ='';
-
 countryInput.addEventListener('input', debounce(inputHandler, DEBOUNCE_DELAY));
 
 function inputHandler(inputValue) {
@@ -40,12 +38,6 @@ function inputHandler(inputValue) {
             }
         }
     )
-
-        // {if value.length}
-        
-        // (countryInfo.innerHTML = createCountryMarkup(value)))
-    // .then(value => (console.log(value)))
-
         .catch(error => {
     if (error.message === 'Not Found') {
         Notify.failure('Oops, there is no country with that name');
@@ -56,71 +48,9 @@ function inputHandler(inputValue) {
     }
         });
 
-    // .catch(error => {
-    //     Notify.failure('Oops, there is no country with that name');
-    //     console.dir(error);        
-    // });
 
 }
 }
-
-// function trimmed(val){
-//     checkSpaces(val);
-//     return inputHandler(val);
-// }
-
-// function typeOfInput(val){
-//     console.log(typeof(val));
-//     let newVal = val.toString();
-//     console.log(typeof(newVal));
-//     let res = {newVal};
-//     console.log(typeof(res));
-// }
-
-
-// function checkSpaces(input){
-//     let inputString = input.toString();
-//     let trimmedString = inputString.trim();
-//     let newInput = {trimmedString};
-//     // console.log(newInput);
-//     return inputHandler(newInput);
-//   }
-
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
-
-
-// function renderCountries(city) {
-//     console.log(`city is - ${city}`);
-  
-//     const markup = city.map
-//         ({
-//           capital,
-//           name: { official },
-//           population,
-//           languages,
-//           flags: { svg },
-//         })
-//       .join('');
-  
-//       console.log(`markup is - ${markup}`)
-//   return `<li><img src="${svg}" alt=""><h2>Name - ${official}</h2><h3>Capital - ${capital}</h3><h3>Population - ${population}</h3><h3>Languages - ${languages}</h3></li>`
-  
-//   //   console.log(markup);
-  
-//   //   // return countryList.innerHTML = markup;
-//   }
-//   // countryList.innerHTML = markup;
 
 function createCountryMarkup(obj){
     // fetchCountries(obj);
